@@ -186,6 +186,8 @@ Le code est dans `j2/tp/defi2_bot_detection.py` et l'analyse complète dans `j2/
 
 **Quels champs deviennent rouges en headless.** Trois, avec pourtant les mêmes flags : `User Agent` (il contient `HeadlessChrome`), `HEADCHR_UA` (le test qui cherche justement ce mot) et `CHR_MEMORY`. J'ai vérifié si mon correctif du TD 2.2, forcer un User-Agent normal, suffisait à les corriger : les trois repassent au vert, y compris `CHR_MEMORY`. Comme `performance.memory` existe dans les deux modes, j'en déduis que ce test se base sur le User-Agent déclaré et pas sur une vraie différence de capacité. Une seule chaîne de caractères fait donc basculer trois lignes du tableau, ce qui explique aussi pourquoi Akamai a laissé passer mon headless dès que j'ai forcé le User-Agent.
 
+Une remarque sur les captures : `driver.save_screenshot()` ne prend que la partie visible à l'écran, et la page fait près de 8000 px de haut. Agrandir la fenêtre ne sert à rien, Chrome la ramène à la hauteur de l'écran. Je passe donc par `Page.captureScreenshot` avec l'option `captureBeyondViewport`, qui capture la page entière.
+
 ---
 
 ## 7. Installation
