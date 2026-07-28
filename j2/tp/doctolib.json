@@ -1,0 +1,92 @@
+[
+  {
+    "nom_specialite": " - ",
+    "adresse": "",
+    "type_consultation": [
+      "Cabinet"
+    ],
+    "prochains_creneaux": [],
+    "url_fiche": "https://www.doctolib.fr/hopital-public/nice/chu-de-nice?pid=establishment-6344&phs=true&page=1&speciality_ids%5B%5D=28"
+  },
+  {
+    "nom_specialite": " - ",
+    "adresse": "",
+    "type_consultation": [
+      "Cabinet"
+    ],
+    "prochains_creneaux": [],
+    "url_fiche": "https://www.doctolib.fr/hematologue/nice/clemence-marcault-bidart?pid=practice-622797&phs=true&page=1&index=1"
+  },
+  {
+    "nom_specialite": " - ",
+    "adresse": "",
+    "type_consultation": [
+      "Cabinet"
+    ],
+    "prochains_creneaux": [],
+    "url_fiche": "https://www.doctolib.fr/pediatre/nice/penelope-cassuto?pid=practice-152332&phs=true&page=1&index=2"
+  },
+  {
+    "nom_specialite": " - ",
+    "adresse": "",
+    "type_consultation": [
+      "Cabinet"
+    ],
+    "prochains_creneaux": [],
+    "url_fiche": "https://www.doctolib.fr/hematologue/nice/lionel-mannone?pid=practice-85352&phs=true&page=1&index=3"
+  },
+  {
+    "nom_specialite": " - ",
+    "adresse": "",
+    "type_consultation": [
+      "Cabinet"
+    ],
+    "prochains_creneaux": [],
+    "url_fiche": "https://www.doctolib.fr/hematologue/nice/mickael-loschi?pid=practice-85351&phs=true&page=1&index=4"
+  },
+  {
+    "nom_specialite": " - ",
+    "adresse": "",
+    "type_consultation": [
+      "Cabinet"
+    ],
+    "prochains_creneaux": [],
+    "url_fiche": "https://www.doctolib.fr/hematologue/nice/lionel-mannone?pid=practice-85351&phs=true&page=1&index=5"
+  },
+  {
+    "nom_specialite": " - ",
+    "adresse": "",
+    "type_consultation": [
+      "Cabinet"
+    ],
+    "prochains_creneaux": [],
+    "url_fiche": "https://www.doctolib.fr/hematologue/nice/sami-benachour-nice?pid=practice-43223&phs=true&page=1&index=6"
+  },
+  {
+    "nom_specialite": " - ",
+    "adresse": "",
+    "type_consultation": [
+      "Cabinet"
+    ],
+    "prochains_creneaux": [],
+    "url_fiche": "https://www.doctolib.fr/centre-lutte-contre-cancer/nice/centre-antoine-lacassagne-clcc?pid=establishment-4502&phs=true&page=1&index=7&speciality_ids%5B%5D=28"
+  },
+  {
+    "nom_specialite": " - ",
+    "adresse": "",
+    "type_consultation": [
+      "Cabinet"
+    ],
+    "prochains_creneaux": [],
+    "url_fiche": "https://www.doctolib.fr/hematologue/nice/ghada-abichou?pid=practice-43223&phs=true&page=1&index=8"
+  },
+  {
+    "nom_specialite": " - ",
+    "adresse": "",
+    "type_consultation": [
+      "Cabinet"
+    ],
+    "prochains_creneaux": [],
+    "url_fiche": "https://www.doctolib.fr/hematologue/nice/mickael-loschi?pid=practice-85352&phs=true&page=1&index=9"
+  }
+]
