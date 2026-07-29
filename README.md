@@ -190,7 +190,47 @@ Une remarque sur les captures : `driver.save_screenshot()` ne prend que la parti
 
 ---
 
-## 7. Installation
+# Jour 3 - Scrapy
+
+## 7. TD 3.1 - AlloCiné (`j3/tp/allocine/`)
+
+Cible : `allocine.fr/film/meilleurs/`. Je me suis limité à **50 films** au lieu de 200, le sujet en demande au moins 50 et ça évite un crawl trop long.
+
+Le `FilmItem` a 6 champs : `titre`, `annee`, `realisateur`, `note_presse`, `note_spectateurs` et `url`. Le `CleanPipeline` fait le trim et caste les deux notes en flottant. Les exports `films.json` et `films.csv` sont générés par `FEEDS` dans `settings.py`, sans passer par `-O`.
+
+J'ai testé les sélecteurs du sujet au scrapy shell avant d'écrire le spider, et **4 sur 7 ne renvoient plus rien** :
+
+| Sélecteur du sujet | Ce que j'ai mis |
+| --- | --- |
+| `a.button--right` (pagination) | il n'y a pas de lien « suivant », je lis le numéro de page dans l'URL |
+| `h1::text` | `.titlebar-title::text`, le `h1` contient « Titre **de Réalisateur** » |
+| `.meta-body-item strong::text` | `.meta-body-info .date::text` puis les 4 derniers caractères pour l'année |
+| `.meta-body-direction a::text` | `.meta-body-direction .dark-grey-link::text`, ce ne sont pas des balises `a` |
+| `.stareval-note::text` et `:last-child` | deux expressions XPath qui filtrent sur les libellés « Presse » et « Spectateurs » |
+
+Résultat : 50 films, aucun champ vide sauf `note_presse` sur 4 films qui n'en ont réellement pas.
+
+## 8. TD 3.2 - Boursorama (`j3/tp/boursorama/`)
+
+Cible : `boursorama.com/bourse/actions/palmares/france/`. Le `SQLitePipeline` remplit `bourse.db`, table `actions` avec `UNIQUE(isin)`.
+
+**Une seule correction, mais elle comptait.** Le tableau a 8 colonnes et pas 5. Le sujet lit le volume en `cells[3]`, or c'est le cours d'ouverture. Le volume est en `cells[6]`. L'erreur ne levait aucune exception : `'73,1000'` devenait `731000`, un nombre tout à fait plausible pour un volume. La base se serait remplie de valeurs fausses en silence.
+
+Le garde-fou `if len(cells) < 5: continue` du sujet sert vraiment : la page contient 30 lignes dont 5 n'ont que 3 cellules, ce sont des encarts (indice CAC 40, Pétrole Brent). Il reste 25 vraies actions.
+
+L'ISIN n'en est pas un au sens strict. La page ne contient aucun code type `FR0000071946`, seulement le symbole interne Boursorama (`1rPATE` pour ALTEN) que le sujet récupère depuis l'URL. J'ai gardé son approche, c'est le seul identifiant disponible et il joue son rôle de clé unique. Testé en relançant le crawl : 50 insertions tentées, 26 lignes en base, 0 doublon.
+
+## 9. Pour aller plus loin - Défis autonomes (Jour 3)
+
+**Défi 1, spider sur un site local** (`j3/tp/nicepresse/`, notes dans `defi1_notes.md`). J'ai pris Nice Presse, rubrique actu régionale, 33 articles avec titre, lien et date. Le bouton « En voir plus » ressemble à un chargement JavaScript mais c'est un vrai lien, donc la récursion du cours suffit. Le titre change de balise entre `h2` et `h4` selon la position, seule la classe `post-title` est commune. La date n'étant pas sur la liste, je fais un crawl à deux niveaux.
+
+**Défi 2, performances de crawl** (notes dans `defi2_notes.md`). Avec les réglages du projet, faire varier `CONCURRENT_REQUESTS` de 1 à 16 ne change rien, 3,5 % de gain. C'est `DOWNLOAD_DELAY = 1.0` qui plafonne tout. En refaisant la mesure sans délai, la vraie courbe apparaît et **le gain devient négligeable à partir de 8**. Le ratio items sur réponses vaut 0,89, et un ratio sous 0,5 signalerait surtout que les sélecteurs de la fiche ont cassé.
+
+**Défi 3, SQL et interprétation financière** (notes dans `defi3_notes.md`, export dans `boursorama/analyse_bourse.csv`). La requête des baisses ne peut pas marcher : l'URL du TD 3.2 est le palmarès des **hausses**, donc les 26 lignes sont toutes positives. Sur les volumes, le sujet parle de médiane mais calcule une moyenne, et l'écart compte : moyenne à 278 217 contre médiane à 71 571, à cause de STELLANTIS seul. Les deux plus fortes hausses s'expliquent par l'actualité du jour, ALTEN et SOPRA STERIA publiaient toutes deux leurs résultats semestriels le 29 juillet en relevant leurs objectifs.
+
+---
+
+## 10. Installation
 
 ```bash
 pip install -r requirements.txt
