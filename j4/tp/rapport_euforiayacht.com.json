@@ -1,0 +1,31 @@
+{
+  "domaine": "euforiayacht.com",
+  "ip": "92.222.139.190",
+  "whois": {
+    "registrar": "OVH, SAS",
+    "creation_date": "2009-05-25",
+    "expiration_date": "2027-05-25",
+    "name_servers": [
+      "DNS200.ANYCAST.ME",
+      "NS200.ANYCAST.ME"
+    ],
+    "country": "FR"
+  },
+  "headers_http": {
+    "status": 200,
+    "server": "Apache",
+    "x_powered_by": "PHP/7.4",
+    "x_frame_options": "n/a",
+    "csp_present": false,
+    "hsts_present": false
+  },
+  "sous_domaines": [
+    "brokerage.euforiayacht.com",
+    "euforiayacht.com",
+    "img.newsletter.euforiayacht.com",
+    "r.newsletter.euforiayacht.com",
+    "www.euforiayacht.com"
+  ],
+  "robots_txt": "# START YOAST BLOCK\n# ---------------------------\nUser-agent: *\nDisallow:\n\nSitemap: https://www.euforiayacht.com/sitemap_index.xml\n# ---------------------------\n# END YOAST BLOCK",
+  "nb_sous_domaines": 5
+}
