@@ -1,0 +1,52 @@
+[
+  {
+    "ville": "Paris",
+    "temperature": "22°",
+    "min": "22°",
+    "max": "31°",
+    "conditions": "Ciel couvert.",
+    "humidite": "",
+    "creneau": "De 9h à 12h",
+    "heure_mesure": "Actualisé à 07h45"
+  },
+  {
+    "ville": "Marseille",
+    "temperature": "26°",
+    "min": "23°",
+    "max": "30°",
+    "conditions": "Ensoleillé.",
+    "humidite": "",
+    "creneau": "De 9h à 12h",
+    "heure_mesure": "Actualisé à 07h45"
+  },
+  {
+    "ville": "Lyon",
+    "temperature": "26°",
+    "min": "24°",
+    "max": "38°",
+    "conditions": "Ensoleillé.",
+    "humidite": "",
+    "creneau": "De 9h à 12h",
+    "heure_mesure": "Actualisé à 07h45"
+  },
+  {
+    "ville": "Toulouse",
+    "temperature": "23°",
+    "min": "21°",
+    "max": "34°",
+    "conditions": "Ciel très nuageux avec de courtes éclaircies.",
+    "humidite": "",
+    "creneau": "De 9h à 12h",
+    "heure_mesure": "Actualisé à 07h45"
+  },
+  {
+    "ville": "Nice",
+    "temperature": "30°",
+    "min": "26°",
+    "max": "33°",
+    "conditions": "Ensoleillé.",
+    "humidite": "",
+    "creneau": "De 9h à 12h",
+    "heure_mesure": "Actualisé à 07h45"
+  }
+]
