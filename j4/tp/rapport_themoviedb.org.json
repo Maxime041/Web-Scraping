@@ -1,0 +1,41 @@
+{
+  "domaine": "themoviedb.org",
+  "ip": "3.160.188.78",
+  "whois": {
+    "registrar": "MarkMonitor, Inc.",
+    "creation_date": "2008-09-15",
+    "expiration_date": "2027-09-15",
+    "name_servers": [
+      "ns-452.awsdns-56.com",
+      "ns-778.awsdns-33.net",
+      "ns-1542.awsdns-00.co.uk",
+      "ns-1186.awsdns-20.org"
+    ],
+    "country": "US"
+  },
+  "headers_http": {
+    "status": 200,
+    "server": "openresty",
+    "x_powered_by": "n/a",
+    "x_frame_options": "n/a",
+    "csp_present": false,
+    "hsts_present": true
+  },
+  "sous_domaines": [
+    "api-bunny.themoviedb.org",
+    "api-test.themoviedb.org",
+    "api.themoviedb.org",
+    "assets.themoviedb.org",
+    "blog.themoviedb.org",
+    "developer.themoviedb.org",
+    "developers.themoviedb.org",
+    "files.themoviedb.org",
+    "media.themoviedb.org",
+    "status.themoviedb.org",
+    "themoviedb.org",
+    "www-test.themoviedb.org",
+    "www.blog.themoviedb.org"
+  ],
+  "robots_txt": "User-agent: AddSearchBot\nUser-agent: AI2Bot\nUser-agent: Ai2Bot-Dolma\nUser-agent: aiHitBot\nUser-agent: Amazonbot\nUser-agent: Andibot\nUser-agent: anthropic-ai\nUser-agent: Applebot\nUser-agent: Applebot-Extended\nUser-agent: Awario\nUser-agent: bedrockbot\nUser-agent: bigsur.ai\nUser-agent: Brightbot 1.0\nUser-agent: Bytespider\nUser-agent: CCBot\nUser-agent: ChatGPT Agent\nUser-agent: ChatGPT-User\nUser-agent: Claude-SearchBot\nUser-agent: Claude-User\nUser-agent: Claude-Web\nUser-agent: ClaudeBot\nUser-agent: CloudVertexBot\nUser-agent: cohere-ai\nUser-agent: cohere-training-data-crawler\nUser-agent: Cotoyogi\nUser-agent: Crawlspace\nUser-agent: Datenbank Crawler\nUser-agent: Devin\nUser-agent: Diffbot\nUser-agent: DuckAssistBot\nUser-agent: Echobot Bot\nUser-agent: EchoboxBot\nUser-agent: FacebookBot\nUser-agent: facebookexternalhit\nUser-agent: Factset_spyderbot\nUser-agent: FirecrawlAgent\nUser-agent: FriendlyCrawler\nUser-agent: Gemini-Deep-Research\nUser-agent: Google-CloudVertexBot\nUser-agent: Google-Extended\nU",
+  "nb_sous_domaines": 13
+}
